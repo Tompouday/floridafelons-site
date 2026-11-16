@@ -37,7 +37,12 @@ body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  height: auto;
+  /* A band, not a splash screen. At full width the 16:9 artwork filled the
+     whole viewport and pushed every word below the fold, so the height is
+     capped and the image crops instead of scaling. */
+  height: clamp(170px, 32vw, 380px);
+  object-fit: cover;
+  object-position: center 46%;
   background: #0a0512;
 }
 
