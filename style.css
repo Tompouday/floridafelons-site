@@ -30,33 +30,45 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* Full-bleed banner, used on the landing page only. The artwork already
+   carries the wordmark, so nothing is drawn over it. */
+.hero {
+  display: block;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: auto;
+  background: #0a0512;
+}
+
+/* Compact header for the policy pages: real logo, no CSS lettering. */
 header {
-  background: linear-gradient(135deg, #140826 0%, var(--magenta) 100%);
-  padding: 44px 16px 38px;
+  background: linear-gradient(135deg, #140826 0%, #2a0f33 60%, var(--magenta) 100%);
+  padding: 26px 16px 24px;
   text-align: center;
 }
 
-header .mark {
-  font-size: 54px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  color: #fff;
-  line-height: 1;
-}
-
-header .rule {
-  width: 96px; height: 6px;
-  background: var(--accent);
-  margin: 14px auto 12px;
-  border-radius: 3px;
+header .logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 12px;
+  box-shadow: 0 0 0 2px rgba(0,229,255,.5), 0 8px 28px rgba(0,0,0,.45);
 }
 
 header .name {
-  color: rgba(255,255,255,.92);
-  font-weight: 700;
-  letter-spacing: 2px;
+  color: rgba(255,255,255,.95);
+  font-weight: 800;
+  letter-spacing: 3px;
   font-size: 13px;
   text-transform: uppercase;
+}
+
+header a { text-decoration: none; }
+
+@media (max-width: 520px) {
+  header .logo { width: 72px; height: 72px; }
 }
 
 main {
